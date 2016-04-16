@@ -16,3 +16,5 @@ http://stackoverflow.com/a/35035923/3583166
 http://stackoverflow.com/a/32501365/3583166 comment  
 http://stackoverflow.com/a/950146/3583166  
 http://rawgit.com/  
+http://cors.io/  
+http://crossorigin.me/  
