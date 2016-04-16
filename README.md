@@ -1,6 +1,10 @@
 # get-request
 crossorigin.me is always going down, why not be able to change the proxy from here?
-# credits
+# How to use
+Import latest3.js. `<script src="//cdn.rawgit.com/colt05/get-request/master/latest3.js"></script>`
+Run importGet. `<script>importGet()</script>`
+Use httpget(). `<script>httpget("http://colt05.github.io/")</script>` will get the contents of colt05.github.io.
+# Credits
 w3schools  
 google chrome developer tools  
 http://stackoverflow.com/questions/247483/http-get-request-in-javascript  
