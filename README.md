@@ -18,3 +18,4 @@ http://stackoverflow.com/a/950146/3583166
 http://rawgit.com/  
 http://cors.io/  
 http://crossorigin.me/  
+https://developer.github.com/v3/  
