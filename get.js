@@ -1,4 +1,4 @@
-function get(url) {
+function httpget(url) {
   var response = "0";
   var xmlHttp = new XMLHttpRequest();
   xmlHttp.open( "GET", url, false );
