@@ -1,5 +1,5 @@
 function latestCommit() {
-  var url = "https://api.github.com/repos/colt05/get-request/commits?hash=".concat(Date.now());
+  var url = "https://api.github.com/repos/colt05/get-request/commits?random=".concat(Date.now());
   var response = "[]";
   var xmlHttp = new XMLHttpRequest();
   xmlHttp.open( "GET", url, false);
