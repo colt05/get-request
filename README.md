@@ -1,8 +1,13 @@
 # get-request
 crossorigin.me is always going down, why not be able to change the proxy from here?
 # How to use
-Import latest3.js. `<script src="//cdn.rawgit.com/colt05/get-request/master/latest3.js"></script>`  
-Run importGet. `<script>importGet()</script>`  
+## latest.js (old)
+Import latest.js. `<script src="//cdn.rawgit.com/colt05/get-request/master/latest.js"></script>`  
+Build the url with RawGit and import it. 
+Use httpget(). `<script>httpget("http://colt05.github.io/")</script>` will get the contents of colt05.github.io.  
+## latestupdater.js (also updates latest.js)
+Import latestupdater.js. `<script src="https://cdn.rawgit.com/colt05/get-request/master/latestupdater.js"></script>`  
+Run importUpdater() to import the updater and run importGet(). `<script>importUpdater();</script>`  
 Use httpget(). `<script>httpget("http://colt05.github.io/")</script>` will get the contents of colt05.github.io.  
 # Credits
 w3schools  
