@@ -1,4 +1,5 @@
-function httpget(url, reponame) {
+var proxyList = ["http://crossorigin.me/", "http://cors.io/?u="];
+function httpget(url, reponame, returnAll) {
   if (reponame === undefined) {
     reponame = "default";
   }
@@ -8,13 +9,21 @@ function httpget(url, reponame) {
   xmlHttp.send( null );
   response = xmlHttp.responseText;
   //do not catch error, error handling would not be good
+  if (returnAll == false || returnAll === undefined) {
   return response;
+  } else {
+  return [response, xmlHttp.status];
+  }
 }
 function proxyget(url, reponame) {
   if (reponame === undefined) {
     reponame = "default";
   }
-  var proxy = "http://crossorigin.me/";
+  var proxy = proxyList[0]
   url = proxy.concat(url);
-  return httpget(url, reponame);
+  var response = httpget(url, reponame, true);
+  if (response[1] == 503 && proxy = "http://crossorigin.me/") {
+    //crossorigin.me is using captcha
+  }
+  return response[0];
 }
