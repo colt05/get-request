@@ -14,7 +14,7 @@ function proxyget(url, reponame) {
   if (reponame === undefined) {
     reponame = "default";
   }
-  var proxy = "http://cors.io/?u=";
+  var proxy = "http://crossorigin.me/";
   url = proxy.concat(url);
   return httpget(url, reponame);
 }
