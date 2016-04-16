@@ -14,3 +14,13 @@ function latestURL() {
   var part2 = "/get.js";
   return part1.concat(hash.concat(part2));
 }
+function importGet() {
+  var callback = function() {return;};
+  var head = document.getElementsByTagName('head')[0];
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = latestURL();
+  script.onreadystatechange = callback;
+  script.onload = callback;
+  head.appendChild(script);
+}
