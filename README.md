@@ -24,3 +24,4 @@ http://rawgit.com/
 http://cors.io/  
 http://crossorigin.me/  
 https://developer.github.com/v3/  
+http://stackoverflow.com/questions/3984961/prevent-xmlhttpreq-s-browser-caching (and comment)  
