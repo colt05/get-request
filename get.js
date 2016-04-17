@@ -22,7 +22,7 @@ function proxyget(url, reponame) {
   var proxy = proxyList[0]
   url = proxy.concat(url);
   var response = httpget(url, reponame, true);
-  if (response[1] == 503 && proxy = "http://crossorigin.me/") {
+  if (response[1] == 503 && proxy == "http://crossorigin.me/") {
     //crossorigin.me is using captcha
   }
   return response[0];
