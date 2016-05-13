@@ -33,6 +33,24 @@ function asyncget(url, reponame, returnAll) {
   }
   xmlHttp.send( null );
 }
+function asyncgetcallback(url, reponame, returnAll, callback) {
+  if (reponame === undefined) {
+    reponame = "default";
+  }
+  var response = "0";
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open( "GET", url, true );
+  xmlHttp.onreadystatechange = function() {
+  response = xmlHttp.responseText;
+  //do not catch error, error handling would not be good
+  if (returnAll == false || returnAll === undefined) {
+  callback(response);
+  } else {
+  callback([response, xmlHttp.status]);
+  }
+  }
+  xmlHttp.send( null );
+}
 function proxyget(url, reponame) {
   if (reponame === undefined) {
     reponame = "default";
