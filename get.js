@@ -41,12 +41,14 @@ function asyncgetcallback(url, reponame, returnAll, callback) {
   var xmlHttp = new XMLHttpRequest();
   xmlHttp.open( "GET", url, true );
   xmlHttp.onreadystatechange = function() {
+  if (xmlHttp.readyState == 4) {
   response = xmlHttp.responseText;
   //do not catch error, error handling would not be good
   if (returnAll == false || returnAll === undefined) {
   callback(response);
   } else {
   callback([response, xmlHttp.status]);
+  }
   }
   }
   xmlHttp.send( null );
