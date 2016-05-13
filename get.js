@@ -15,6 +15,25 @@ function httpget(url, reponame, returnAll) {
   return [response, xmlHttp.status];
   }
 }
+//testing
+function asyncget(url, reponame, returnAll, callback) {
+  if (reponame === undefined) {
+    reponame = "default";
+  }
+  var response = "0";
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open( "GET", url, true );
+  xmlHttp.onreadystatechange = function() {
+  response = xmlHttp.responseText;
+  //do not catch error, error handling would not be good
+  if (returnAll == false || returnAll === undefined) {
+  return response;
+  } else {
+  return [response, xmlHttp.status];
+  }
+  }
+  xmlHttp.send( null );
+}
 function proxyget(url, reponame) {
   if (reponame === undefined) {
     reponame = "default";
