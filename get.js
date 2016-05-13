@@ -15,8 +15,7 @@ function httpget(url, reponame, returnAll) {
   return [response, xmlHttp.status];
   }
 }
-//testing
-function asyncget(url, reponame, returnAll, callback) {
+function asyncget(url, reponame, returnAll) {
   if (reponame === undefined) {
     reponame = "default";
   }
