@@ -26,7 +26,7 @@ function importGet(callback) {
   var script = document.createElement('script');
   script.type = 'text/javascript';
   script.src = latestURL();
-  script.onreadystatechange = callbackscript;
-  script.onload = callback;
+  //script.onreadystatechange = callbackscript;
+  script.onload = callbackscript;
   head.appendChild(script);
 }
