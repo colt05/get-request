@@ -15,6 +15,7 @@ function httpget(url, reponame, returnAll) {
   return [response, xmlHttp.status];
   }
 }
+/*
 function asyncget(url, reponame, returnAll) {
   if (reponame === undefined) {
     reponame = "default";
@@ -32,6 +33,13 @@ function asyncget(url, reponame, returnAll) {
   }
   }
   xmlHttp.send( null );
+}
+*/
+//THIS DOES NOT WORK! This is a placeholder!
+function asyncget(url, reponame, returnAll) {
+  asyncgetcallback(url, reponame, false, function(str) {
+    return str;
+  });
 }
 function asyncgetcallback(url, reponame, returnAll, callback) {
   if (reponame === undefined) {
