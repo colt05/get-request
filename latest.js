@@ -15,13 +15,18 @@ function latestURL() {
   var part3 = Date.now();
   return part1.concat(hash.concat(part2.concat(part3)));
 }
-function importGet() {
-  var callback = function() {return;};
+function importGet(callback) {
+  var callbackscript = function() {return;};
+    if (callback === undefined) {
+    // do nothing
+    } else {
+      callbackscript = callback;
+    }
   var head = document.getElementsByTagName('head')[0];
   var script = document.createElement('script');
   script.type = 'text/javascript';
   script.src = latestURL();
-  script.onreadystatechange = callback;
+  script.onreadystatechange = callbackscript;
   script.onload = callback;
   head.appendChild(script);
 }
