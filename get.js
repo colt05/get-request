@@ -1,4 +1,4 @@
-var proxyList = ["http://crossorigin.me/", "http://cors.io/?u="];
+var proxyList = ["http://crossorigin.me/", "http://cors.io/?"];
 function httpget(url, reponame, returnAll) {
   if (reponame === undefined) {
     reponame = "default";
