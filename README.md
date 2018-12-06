@@ -6,7 +6,7 @@ Import latest.js. `<script src="//cdn.rawgit.com/colt05/get-request/master/lates
 Build the url with RawGit and import it.  
 Use httpget(). `<script>httpget("http://colt05.github.io/");</script>` will get the contents of colt05.github.io.   
 ## latestupdater.js (also updates latest.js)  
-Import latestupdater.js. `<script src="https://cdn.rawgit.com/colt05/get-request/master/latestupdater.js"></script>`    
+Import latestupdater.js. `<script src="https://cdn.jsdelivr.net/gh/colt05/get-request/latestupdater.js"></script>`    
 Run importUpdater() to import the updater. It will automatically run importGet(). `<script>importUpdater();</script>`  
 Use httpget(). `<script>httpget("http://colt05.github.io/");</script>` will get the contents of colt05.github.io.  
 # Credits
